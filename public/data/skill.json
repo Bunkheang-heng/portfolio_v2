@@ -1,0 +1,210 @@
+{
+  "skills": {
+    "languages": [
+      {"name":"HTML", "level": 100, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"},
+      {"name":"CSS", "level": 100, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"},
+      { "name": "JavaScript", "level": 90, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+      { "name": "TypeScript", "level": 85, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { "name": "Python", "level": 80, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+      { "name": "Java", "level": 75, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+      { "name": "C++", "level": 70, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" }
+    ],
+    "frontend": [
+      { "name": "React", "level": 95, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { "name": "Next.js", "level": 90, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+      { "name": "Tailwind CSS", "level": 85, "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png" },
+      { "name": "Angular", "level": 75, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" }
+    ],
+    "backend": [
+      { "name": "Node.js", "level": 90, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+      { "name": "Express", "level": 85, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+      { "name": "NestJS", "level": 75, "icon": "https://upload.wikimedia.org/wikipedia/commons/a/a8/NestJS.svg" }
+    ],
+    "database": [
+      { "name": "MongoDB", "level": 90, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { "name": "PostgreSQL", "level": 85, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+      { "name": "MySQL", "level": 80, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+      { "name": "Firebase", "level": 85, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
+      { "name": "Supabase", "level": 75, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" }
+    ],
+    "devops": [
+      { "name": "Docker", "level": 85, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+      { "name": "Kubernetes", "level": 75, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
+      { "name": "AWS", "level": 80, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+      { "name": "GitHub Actions", "level": 85, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" },
+      { "name": "Gitlab CI/CD", "level": 70, "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" }
+    ],
+    "cybersecurity": [
+      { "name": "Real-world Web Exploitation", "level": 85, "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/security/security-original.svg" },
+      { "name": "Real-world System Exploitation", "level": 80, "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" },
+      { "name": "Digital Forensics", "level": 75, "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/terminal/terminal-original.svg" },
+      { "name": "Malware Development/Analysis", "level": 70, "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/code/code-original.svg" },
+      { "name": "Incident Response", "level": 75, "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/alert/alert-original.svg" }
+    ]
+  },
+  "experience": [
+    {
+      "id": 1,
+      "role": "Full Stack Developer",
+      "company": "Save the Children Cambodia",
+      "period": "Jan 2024 - Present",
+      "description": "Developed and maintained web applications for projects like Positive Parenting, using ReactJS, NodeJS, and Firebase.",
+      "technologies": ["React", "Node.js", "Firebase", "JavaScript", "CSS"],
+      "achievements": [
+        "Developed and maintained web applications for key projects",
+        "Implemented responsive designs for better user experience",
+        "Collaborated with cross-functional teams to deliver project goals"
+      ]
+    },
+    {
+      "id": 2,
+      "role": "Software Developer",
+      "company": "Mekong Tech Festival",
+      "period": "Dec 2023",
+      "description": "Worked in the technical team to support conference booths and ensure smooth operations.",
+      "technologies": ["Technical Support", "Event Management", "Troubleshooting"],
+      "achievements": [
+        "Ensured all technical aspects of conference booths functioned properly",
+        "Provided rapid response to technical issues during the event",
+        "Collaborated with teams to deliver a seamless conference experience"
+      ]
+    },
+    {
+      "id": 3,
+      "role": "Food Team Volunteer",
+      "company": "Earth Hour",
+      "period": "March 2024",
+      "description": "Prepared and distributed food to participants and other volunteers during the event.",
+      "technologies": ["Event Support", "Team Coordination", "Resource Management"],
+      "achievements": [
+        "Efficiently distributed food to over 100 participants",
+        "Coordinated with other team members to ensure timely service",
+        "Contributed to the overall success of the Earth Hour event"
+      ]
+    },
+    {
+      "id": 4,
+      "role": "Event Organizer",
+      "company": "Rice of Love Football Event",
+      "period": "July 2022",
+      "description": "Organized a football tournament to raise funds for underprivileged communities and coordinated football teams.",
+      "technologies": ["Event Planning", "Fundraising", "Team Coordination"],
+      "achievements": [
+        "Successfully raised funds for underprivileged communities",
+        "Coordinated multiple football teams throughout the tournament",
+        "Managed event logistics and ensured smooth operation"
+      ]
+    }
+  ],
+  "hackathons": [
+    {
+      "id": 1,
+      "name": "Clean Energy Hackathon",
+      "year": "2023",
+      "result": "Winner",
+      "description": "Created a biogas project, turning waste into sustainable energy.",
+      "technologies": ["Renewable Energy", "Sustainability", "Engineering"]
+    },
+    {
+      "id": 2,
+      "name": "Turing Hackathon",
+      "year": "2023",
+      "result": "Finalist",
+      "description": "Developed an app, JEANG, for booking mechanics who can come to fix vehicles.",
+      "technologies": ["Mobile Development", "Service Platform", "UX Design"]
+    },
+    {
+      "id": 3,
+      "name": "Navathon by Save the Children",
+      "year": "2023",
+      "result": "Finalist",
+      "description": "Built a Telegram chatbot (Kiddo Guide) to enhance parenting skills and support positive parenting.",
+      "technologies": ["Chatbot", "Telegram API", "Family Support"]
+    },
+    {
+      "id": 4,
+      "name": "Ideathon",
+      "year": "2023",
+      "result": "Top 10 Winner",
+      "description": "Developed RECO, a digital platform to replace student record books and facilitate parent-child engagement.",
+      "technologies": ["EdTech", "Digital Transformation", "UX/UI Design"]
+    },
+    {
+      "id": 5,
+      "name": "Uniernpreneur Competition",
+      "year": "2024",
+      "result": "Top 10 Winner",
+      "description": "Created a website helping high school students learn about potential college majors.",
+      "technologies": ["Education", "Career Guidance", "Web Development"]
+    },
+    {
+      "id": 6,
+      "name": "Sandbox Competition",
+      "year": "2024",
+      "result": "Winner",
+      "description": "Developed STEMii, a website focused on promoting STEM education.",
+      "technologies": ["STEM Education", "Web Development", "Educational Content"]
+    }
+  ],
+  "volunteer": [
+    {
+      "id": 1,
+      "role": "Technical Volunteer",
+      "organization": "Earth Hour",
+      "description": "Provided technical support for the campaign, ensuring smooth operations.",
+      "achievements": [
+        "Ensured all technical systems functioned properly during the event",
+        "Troubleshot issues in real-time to maintain event continuity",
+        "Supported the technical needs of presenters and participants"
+      ]
+    },
+    {
+      "id": 2,
+      "role": "Photographer",
+      "organization": "Cambodia Conference",
+      "description": "Captured key moments at the conference, creating a visual record of the event.",
+      "achievements": [
+        "Created a comprehensive visual documentation of the conference",
+        "Highlighted key speakers and important moments through photography",
+        "Provided high-quality images for event promotion and records"
+      ]
+    },
+    {
+      "id": 3,
+      "role": "Technical Support",
+      "organization": "Mekong Tech Festival",
+      "description": "Assisted in the setup of booths, providing technical support for speakers and participants.",
+      "achievements": [
+        "Set up and maintained technical equipment for conference booths",
+        "Assisted speakers with presentation technology needs",
+        "Resolved technical issues promptly to ensure smooth operations"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "Bachelor of Computer Science",
+      "institution": "American University of Phnom Penh (AUPP)",
+      "period": "2022 - Present",
+      "description": "Specialized in Cybersecurity with focus on software development, web development, AI, and technology solutions for social impact.",
+      "achievements": [
+        "Active member of AUPP Tech Club",
+        "Participated in multiple hackathons and coding competitions",
+        "Developing projects focused on social impact through technology"
+      ]
+    },
+    {
+      "id": 2,
+      "degree": "Bachelor of Information Technology Management",
+      "institution": "Fort Hays State University (partnership with AUPP)",
+      "period": "2022 - Present",
+      "description": "Transfer program specializing in Software Development, focusing on information systems, project management, and tech-driven solutions.",
+      "achievements": [
+        "Maintaining strong academic performance",
+        "Applying knowledge to real-world projects",
+        "Developing practical skills in software development and project management"
+      ]
+    }
+  ]
+}

@@ -2,20 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+:root,
+.light {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* UI colors */
+  --card-bg: #f8f8f8;
+  --card-border: #e0e0e0;
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --code-window-bg: #f0f0f0;
+  --code-editor-bg: #f5f5f5;
+  --code-comment: #5a5a5a;
+  --accent-primary: #3b82f6;
+  --accent-secondary: #1d4ed8;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --matrix-pattern: rgba(59, 130, 246, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  
+  /* UI colors */
+  --card-bg: #1f2937;
+  --card-border: #374151;
+  --nav-bg: rgba(17, 24, 39, 0.9);
+  --code-window-bg: #111827;
+  --code-editor-bg: #0f172a;
+  --code-comment: #6b7280;
+  --accent-primary: #3b82f6;
+  --accent-secondary: #60a5fa;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --matrix-pattern: rgba(59, 130, 246, 0.2);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Theme transition effects */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+/* Matrix background pattern helper class */
+.matrix-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%233b82f6' fill-opacity='0.2' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"),
+                    linear-gradient(to bottom, var(--code-window-bg), var(--code-editor-bg));
 }

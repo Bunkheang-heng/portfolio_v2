@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "QuickResume",
+        "description": "A web app to generate professional resumes using Next.js and Firebase. Features AI-assisted templates and real-time editing.",
+        "image": "https://drive.google.com/uc?export=view&id=1tnUHUbE7DE6cCt5ElUfV1njocSo4jj6a",
+        "link": "https://quick-resume-delta.vercel.app/",
+        "github": "https://github.com/Bunkheang-heng/QuickResume"
+    },
+    {
+        "id": 2,
+        "title": "STEMii",
+        "description": "A STEM learning platform with AI-based self-assessment tools, built using ReactJS, NodeJS, and Firebase.",
+        "image": "https://drive.google.com/uc?export=view&id=1ABUjGm9LpT2C_okQgtYT95JTP_s9b4FK",
+        "link": "https://stemii1.web.app/",
+        "github": "https://github.com/Bunkheang-heng/stemii1.0"
+    },
+    {
+        "id": 3,
+        "title": "SakRean",
+        "description": "Helps high school students choose a major through career-matching tools and academic resources.",
+        "image": "https://drive.google.com/uc?export=view&id=1crFikEw6TnyyNHCU7isAeuEFPCdrvMb0",
+        "link": "https://sakrean-8b632.web.app/",
+        "github": "https://github.com/Bunkheang-heng/SakRean"
+    },
+    {
+        "id": 4,
+        "title": "Phishing Detection System",
+        "description": "A Flask-based web app that uses ML and NLP to detect and block phishing emails in real time.",
+        "image": "https://drive.google.com/uc?export=view&id=1J_L3Zez8uT2FY4e3XBJfEtF4DcduvE9U",
+        "link": "https://github.com/Bunkheang-heng/PhishingDetection",
+        "github": "https://github.com/Bunkheang-heng/PhishingDetection"
+    },
+    {
+        "id": 5,
+        "title": "Khmer Dev",
+        "description": "A side project that I built with a team of 3 people, I was responsible for the backend. KhmerDev is a website that allow people to learn code for free in khmer. Frontend is built using ReactJS, TailwindCss. Backend is built using NestJs, PostgresSQL, Redis and Docker.",
+        "image": "https://drive.google.com/uc?export=view&id=1qICqcc2KBfo2uT7lPRANxm8v3szMuJGH",
+        "link": "https://dev-web-xi.vercel.app/course",
+        "github": "https://github.com/Bunkheang-heng/KhmerDev"
+    },
+    {
+        "id": 6,
+        "title": "KaksekAI",
+        "description": "Kasekai is a Khmer-language mobile application designed to empower Cambodian farmers through smart features like land measurement, AI-powered crop analysis, and a farming assistant, offering personalized recommendations based on location, soil, and weather—with full offline support for rural accessibility. It is built using Flutter, Weather API, Gemini Vison API, Gemini Text Generation API, Google Maps, Firebase.",
+        "image": "https://drive.google.com/uc?export=view&id=1JTIt68OMCNL72vnbP8rt1GJ0sJo5Tna7",
+        "link": "https://github.com/KaksekAi/kaksekai_mobile",
+        "github": "https://github.com/KaksekAi/kaksekai_mobile"
+    }
+]

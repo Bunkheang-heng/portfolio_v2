@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "title": "Clean Energy Hackathon",
+      "issuer": "Clean Energy Hackathon",
+      "date": "2023",
+      "src": "/certificate/certificate1.jpg",
+      "description": "Clean Energy Hackathon is a global competition that challenges participants to develop innovative solutions for the clean energy sector. The event brings together students, professionals, and enthusiasts to showcase their creativity and skills in clean energy solutions."
+    },
+    {
+      "id": 2,
+      "title": "Ideathon", 
+      "issuer": "Ideathon",
+      "date": "2023",
+      "src": "/certificate/certificate2.jpg",
+      "description": "Ideathon is a competition that challenges participants to use technology to solve real-world problems."
+    },
+    {
+      "id": 3,
+      "title": "ASEAN Cyber Shield",
+      "issuer": "ACS Online education", 
+      "date": "2025",
+      "src": "https://drive.google.com/uc?export=view&id=1DEcSTHik6ECOUKYptAcvK926v1kn6fx4",
+      "description": "One of the Outstanding Students in the ASEAN Cyber Shield (1st Generation Curriculum: Apr. 2024 – Aug. 2024). Completed courses in Real-world Web Exploitation, Real-world System Exploitation, Digital Forensic, Malware Dev/Analysis, and Incident Response."
+    }
+]
