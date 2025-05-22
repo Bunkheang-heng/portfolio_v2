@@ -97,7 +97,7 @@ export default function Home() {
               </Link>
 
               <Link 
-                href="/certificate"
+                href="/ask"
                 className="group bg-[var(--card-bg)] rounded-lg overflow-hidden shadow-lg hover:shadow-xl border border-[var(--card-border)] hover:border-[var(--accent-primary)] transition-all"
               >
                 <div className="bg-[var(--code-window-bg)] px-4 py-2 flex items-center border-b border-[var(--card-border)]">
@@ -106,19 +106,19 @@ export default function Home() {
                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   </div>
-                  <div className="ml-4 text-sm text-[var(--text-secondary)] flex-1">certificates.js</div>
+                  <div className="ml-4 text-sm text-[var(--text-secondary)] flex-1">ask-ai.js</div>
                 </div>
                 
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="p-3 bg-[var(--accent-primary)]/10 rounded-lg border border-[var(--accent-primary)]/30">
-                      <Image src="/certificate.svg" alt="Certificates" width={24} height={24} />
+                      <Image src="/robot.svg" alt="AI Assistant" width={24} height={24} />
                     </div>
-                    <h3 className="text-xl font-semibold text-[var(--accent-primary)] group-hover:text-[var(--accent-secondary)]">certs.verify()</h3>
+                    <h3 className="text-xl font-semibold text-[var(--accent-primary)] group-hover:text-[var(--accent-secondary)]">ai.chat()</h3>
                   </div>
                   <p className="text-[var(--text-secondary)] bg-[var(--code-editor-bg)] p-3 rounded border border-[var(--card-border)] text-sm">
                     <span className="text-[var(--code-comment)]">// </span>
-                    View my certifications and achievements
+                    Ask my AI assistant anything about me
                   </p>
                 </div>
               </Link>

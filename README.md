@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bunkheang's Portfolio Website
+
+A modern developer portfolio website built with Next.js, React, Tailwind CSS, and Framer Motion. Features an interactive AI assistant powered by Google's Gemini API.
+
+## Features
+
+- Responsive design with modern UI
+- Interactive animations using Framer Motion
+- Dark/light mode themes
+- Portfolio sections: Projects, Skills, Certificates
+- AI Assistant powered by Google Gemini API
 
 ## Getting Started
 
@@ -20,12 +30,31 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Gemini AI Assistant Setup
+
+The portfolio includes an AI assistant feature powered by Google's Gemini API. To use it:
+
+1. **API Key**: The API key is already configured in the `.env.local` file.
+2. **Usage**: Visit the "Ask AI" section of the portfolio to interact with the assistant.
+3. **Customization**: You can customize the AI's behavior by editing the system prompt in `src/app/api/gemini/route.ts`.
+
+## Troubleshooting
+
+If you encounter issues with the AI assistant:
+
+1. **Model Compatibility**: The application tries different Gemini models (1.5-pro, pro) in case some aren't available.
+2. **API Limits**: Be aware of usage limits with the Gemini API.
+3. **Error Messages**: Check the browser console for detailed error information.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Framer Motion](https://www.framer.com/motion/)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [Google Generative AI](https://ai.google.dev/)
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 

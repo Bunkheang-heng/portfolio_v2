@@ -12,6 +12,15 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
+  const menuItems = [
+    { path: '/', label: 'Home' },
+    { path: '/project', label: 'Projects' },
+    { path: '/skill', label: 'Skills' },
+    { path: '/certificate', label: 'Certificates' },
+    { path: '/ask', label: 'Ask AI' },
+    { path: '/contact', label: 'Contact' },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
@@ -56,14 +65,13 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, staggerChildren: 0.1 }}
           >
-            {['/', '/project', '/skill', '/certificate'].map((path, index) => {
-              const isActive = pathname === path;
-              const labels = ['home()', 'projects()', 'knowledge()', 'certificates()'];
+            {menuItems.map((item, index) => {
+              const isActive = pathname === item.path;
               
               return (
-                <motion.li key={path} whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400 }}>
+                <motion.li key={item.path} whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400 }}>
                   <Link 
-                    href={path}
+                    href={item.path}
                     className="relative px-4 py-2 rounded-lg font-mono transition-all"
                   >
                     <span className={`relative z-10 ${
@@ -71,7 +79,7 @@ const Navbar = () => {
                         ? isActive ? 'text-[var(--accent-primary)] font-medium' : 'text-[var(--text-secondary)]'
                         : isActive ? 'text-[var(--accent-primary)] font-medium' : 'text-[var(--text-secondary)]'
                     } transition-colors duration-300`}>
-                      {labels[index]}
+                      {item.label}
                     </span>
                     
                     {isActive && (
@@ -198,14 +206,13 @@ const Navbar = () => {
             <div className="px-6 py-4">
               <div className="text-xs text-[var(--code-comment)] mb-2">// NAVIGATION</div>
               <ul className="flex flex-col space-y-3">
-                {['/', '/project', '/skill', '/certificate'].map((path, index) => {
-                  const isActive = pathname === path;
-                  const labels = ['home()', 'projects()', 'skills()', 'certificates()'];
+                {menuItems.map((item, index) => {
+                  const isActive = pathname === item.path;
                   
                   return (
-                    <li key={path}>
+                    <li key={item.path}>
                       <Link 
-                        href={path}
+                        href={item.path}
                         onClick={() => setMobileMenuOpen(false)} 
                         className={`block px-4 py-2 rounded-lg font-mono ${
                           isActive 
@@ -213,7 +220,7 @@ const Navbar = () => {
                             : "text-[var(--text-secondary)] hover:bg-[var(--code-editor-bg)]"
                         }`}
                       >
-                        {labels[index]}
+                        {item.label}
                       </Link>
                     </li>
                   );
