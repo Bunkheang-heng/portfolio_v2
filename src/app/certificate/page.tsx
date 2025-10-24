@@ -18,9 +18,9 @@ interface Certificate {
 }
 
 export default function Certificate() {
-  const [viewMode, setViewMode] = useState('grid');
   const [expandedCert, setExpandedCert] = useState<number | null>(null);
   const [certificates, setCertificates] = useState<Certificate[]>([]);
+  const [loadingPdf, setLoadingPdf] = useState<number | null>(null);
 
   // Fetch certificate data
   useEffect(() => {
@@ -33,9 +33,25 @@ export default function Certificate() {
   const toggleExpand = (id: number) => {
     if (expandedCert === id) {
       setExpandedCert(null);
+      setLoadingPdf(null);
     } else {
       setExpandedCert(id);
+      // Set loading state for PDF files
+      const cert = certificates.find(c => c.id === id);
+      if (cert && isPdfFile(cert.src)) {
+        setLoadingPdf(id);
+      }
     }
+  };
+
+  // Check if file is PDF
+  const isPdfFile = (src: string) => {
+    return src.toLowerCase().endsWith('.pdf');
+  };
+
+  // Handle PDF view/download
+  const handlePdfView = (src: string, title: string) => {
+    window.open(src, '_blank');
   };
 
   return (
@@ -79,93 +95,7 @@ export default function Certificate() {
               />
             </motion.div>
 
-            {/* View mode toggle */}
-            <div className="flex justify-center mb-8">
-              <div className="bg-[var(--code-editor-bg)] p-1 rounded-lg border border-[var(--card-border)] flex">
-                <button 
-                  onClick={() => setViewMode('grid')}
-                  className={`px-4 py-2 rounded ${viewMode === 'grid' ? 'bg-[var(--accent-primary)] text-white' : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'}`}
-                >
-                  <span className="text-sm">grid.view()</span>
-                </button>
-                <button 
-                  onClick={() => setViewMode('list')}
-                  className={`px-4 py-2 rounded ${viewMode === 'list' ? 'bg-[var(--accent-primary)] text-white' : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'}`}
-                >
-                  <span className="text-sm">list.view()</span>
-                </button>
-              </div>
-            </div>
 
-            {viewMode === 'grid' ? (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {certificates.map((cert, index) => (
-                  <motion.div
-                    key={cert.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    whileHover={{ y: -5 }}
-                    className="bg-[var(--code-editor-bg)]/80 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg border border-[var(--card-border)] hover:border-[var(--accent-primary)] transition-all duration-300"
-                  >
-                    <div className="bg-[var(--code-window-bg)] px-4 py-2 border-b border-[var(--card-border)] flex justify-between items-center">
-                      <div className="flex space-x-2">
-                        <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                        <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                        <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                      </div>
-                      <span className="text-xs text-[var(--text-secondary)]">certificate-{cert.id}.json</span>
-                    </div>
-                    
-                    <div className="p-5">
-                      <div className="relative h-40 mb-4 bg-[var(--code-window-bg)] rounded flex items-center justify-center">
-                        <Image
-                          src={cert.src}
-                          alt={cert.title}
-                          fill
-                          className="object-contain p-2"
-                        />
-                      </div>
-                      
-                      <div className="space-y-3">
-                        <h3 className="text-xl font-bold text-[var(--accent-primary)] flex items-center">
-                          <span className="w-2 h-4 bg-[var(--accent-primary)] mr-2"></span>
-                          {cert.title}
-                        </h3>
-                        
-                        <div className="text-[var(--text-primary)] flex justify-between">
-                          <span className="text-[var(--text-secondary)]">
-                            <span className="text-[var(--accent-primary)]">issuer:</span> {cert.issuer}
-                          </span>
-                          <span className="bg-[var(--accent-primary)]/20 text-[var(--accent-primary)] px-2 py-1 rounded text-xs">
-                            {cert.date}
-                          </span>
-                        </div>
-                        
-                        <p className="text-[var(--text-secondary)] text-sm border-t border-[var(--card-border)] pt-3 mt-2">
-                          {cert.description.length > 100 
-                            ? `${cert.description.substring(0, 100)}...` 
-                            : cert.description}
-                        </p>
-                        
-                        <div className="flex justify-end">
-                          <button 
-                            className="text-sm text-[var(--accent-primary)] hover:text-[var(--accent-secondary)]"
-                            onClick={() => toggleExpand(cert.id)}
-                          >
-                            <code>
-                              {expandedCert === cert.id 
-                                ? 'certificate.collapse()' 
-                                : 'certificate.expand()'}
-                            </code>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            ) : (
               <div className="space-y-4">
                 <div className="bg-[var(--code-editor-bg)] rounded-lg p-4 border border-[var(--card-border)] mb-4">
                   <code className="text-sm text-[var(--text-primary)]">
@@ -187,12 +117,23 @@ export default function Certificate() {
                       onClick={() => toggleExpand(cert.id)}
                     >
                       <div className="relative min-w-[100px] h-[100px] bg-[var(--code-window-bg)] rounded overflow-hidden flex-shrink-0">
-                        <Image
-                          src={cert.src}
-                          alt={cert.title}
-                          fill
-                          className="object-contain p-2"
-                        />
+                        {isPdfFile(cert.src) ? (
+                          <div className="w-full h-full flex flex-col items-center justify-center text-center p-2">
+                            <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-2">
+                              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+                              </svg>
+                            </div>
+                            <p className="text-xs text-[var(--text-secondary)]">PDF</p>
+                          </div>
+                        ) : (
+                          <Image
+                            src={cert.src}
+                            alt={cert.title}
+                            fill
+                            className="object-contain p-2"
+                          />
+                        )}
                       </div>
                       
                       <div className="flex-1">
@@ -219,6 +160,89 @@ export default function Certificate() {
                               <div className="text-[var(--text-muted)] mb-1">// Description</div>
                               <p>{cert.description}</p>
                             </div>
+                            
+                            {/* Certificate Display */}
+                            <div className="mt-4 bg-[var(--code-window-bg)] p-4 rounded border border-[var(--card-border)]">
+                              <div className="text-[var(--text-muted)] mb-2 text-sm">// Certificate Preview</div>
+                              <div className="relative h-80 bg-white rounded border border-[var(--card-border)] overflow-hidden">
+                                {isPdfFile(cert.src) ? (
+                                  <div className="w-full h-full flex flex-col">
+                                    {/* PDF Viewer Header */}
+                                    <div className="bg-gray-100 px-3 py-2 flex items-center justify-between border-b">
+                                      <div className="flex items-center gap-2">
+                                        <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                                        <span className="text-sm text-gray-600">PDF Viewer</span>
+                                      </div>
+                                      <button
+                                        onClick={() => handlePdfView(cert.src, cert.title)}
+                                        className="text-xs bg-[var(--accent-primary)] text-white px-2 py-1 rounded hover:bg-[var(--accent-secondary)] transition-colors flex items-center gap-1"
+                                      >
+                                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                          <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                                        </svg>
+                                        Open in New Tab
+                                      </button>
+                                    </div>
+                                    
+                                    {/* PDF iframe */}
+                                    <div className="relative flex-1">
+                                      {loadingPdf === cert.id && (
+                                        <div className="absolute inset-0 flex items-center justify-center bg-white z-10">
+                                          <div className="flex flex-col items-center gap-2">
+                                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[var(--accent-primary)]"></div>
+                                            <span className="text-sm text-gray-600">Loading PDF...</span>
+                                          </div>
+                                        </div>
+                                      )}
+                                      <iframe
+                                        src={cert.src}
+                                        className="w-full h-full border-0"
+                                        title={`${cert.title} Certificate`}
+                                        onLoad={() => setLoadingPdf(null)}
+                                        onError={(e) => {
+                                          setLoadingPdf(null);
+                                          // Fallback if iframe fails to load
+                                          const iframe = e.target as HTMLIFrameElement;
+                                          iframe.style.display = 'none';
+                                          const fallback = iframe.nextElementSibling as HTMLElement;
+                                          if (fallback) fallback.style.display = 'flex';
+                                        }}
+                                      />
+                                    </div>
+                                    
+                                    {/* Fallback content if iframe fails */}
+                                    <div 
+                                      className="w-full h-full flex-col items-center justify-center text-center p-4 hidden"
+                                      style={{ display: 'none' }}
+                                    >
+                                      <div className="w-20 h-20 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+                                        <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                          <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+                                        </svg>
+                                      </div>
+                                      <p className="text-gray-600 mb-4">PDF Certificate</p>
+                                      <button
+                                        onClick={() => handlePdfView(cert.src, cert.title)}
+                                        className="bg-[var(--accent-primary)] text-white px-6 py-3 rounded hover:bg-[var(--accent-secondary)] transition-colors flex items-center gap-2"
+                                      >
+                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                          <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                                        </svg>
+                                        View PDF Certificate
+                                      </button>
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <Image
+                                    src={cert.src}
+                                    alt={cert.title}
+                                    fill
+                                    className="object-contain p-4"
+                                  />
+                                )}
+                              </div>
+                            </div>
+                            
                             <div className="mt-4 bg-[var(--code-window-bg)] p-3 rounded border border-[var(--card-border)]">
                               <code className="text-xs text-[var(--text-secondary)]">
                                 <span className="text-[var(--accent-primary)]">certificate</span>.<span className="text-[var(--accent-secondary)]">verify</span>() =&gt; &#123; <span className="text-green-400">status</span>: <span className="text-orange-300">"valid"</span>, <span className="text-green-400">expires</span>: <span className="text-orange-300">"never"</span> &#125;
@@ -248,7 +272,6 @@ export default function Certificate() {
                   </code>
                 </div>
               </div>
-            )}
             
             <div className="mt-12 text-center">
               <div className="inline-block bg-[var(--code-editor-bg)] px-6 py-3 rounded-lg border border-[var(--card-border)]">

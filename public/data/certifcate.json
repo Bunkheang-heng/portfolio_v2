@@ -22,5 +22,109 @@
       "date": "2025",
       "src": "https://drive.google.com/uc?export=view&id=1DEcSTHik6ECOUKYptAcvK926v1kn6fx4",
       "description": "One of the Outstanding Students in the ASEAN Cyber Shield (1st Generation Curriculum: Apr. 2024 – Aug. 2024). Completed courses in Real-world Web Exploitation, Real-world System Exploitation, Digital Forensic, Malware Dev/Analysis, and Incident Response."
+    },
+    {
+      "id": 4,
+      "title": "AWS Academy Cloud Foundations",
+      "issuer": "Amazon Web Services (AWS)",
+      "date": "2024",
+      "src": "/certificate/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20240713-7-av9ujm.pdf",
+      "description": "AWS Academy Cloud Foundations certification demonstrating knowledge of cloud computing concepts, AWS services, security, architecture, pricing, and support."
+    },
+    {
+      "id": 5,
+      "title": "C Programming Certificate",
+      "issuer": "Programming Certification Body",
+      "date": "2023",
+      "src": "/certificate/C_Programming_Certificate.pdf",
+      "description": "Certificate demonstrating proficiency in C programming language, including data structures, algorithms, and software development fundamentals."
+    },
+    {
+      "id": 6,
+      "title": "Certificate of Excellence",
+      "issuer": "Educational Institution",
+      "date": "2023",
+      "src": "/certificate/Certificate of Excellence_HENG BUNKHEANG.pdf",
+      "description": "Certificate of Excellence recognizing outstanding academic performance and achievements in educational programs."
+    },
+    {
+      "id": 7,
+      "title": "Digital Forensic Certificate",
+      "issuer": "Cybersecurity Training Institute",
+      "date": "2024",
+      "src": "/certificate/Digital_Forensic_certificate.pdf",
+      "description": "Certificate in Digital Forensics covering computer forensics, evidence collection, analysis techniques, and legal aspects of digital investigations."
+    },
+    {
+      "id": 8,
+      "title": "Incident Response Certificate",
+      "issuer": "Cybersecurity Training Institute",
+      "date": "2024",
+      "src": "/certificate/Incident_Response_certificate.pdf",
+      "description": "Certificate in Incident Response covering cybersecurity incident handling, threat detection, containment, and recovery procedures."
+    },
+    {
+      "id": 9,
+      "title": "Malware Development and Analysis Certificate",
+      "issuer": "Cybersecurity Training Institute",
+      "date": "2024",
+      "src": "/certificate/Malware_Dev_Analysis_certificate.pdf",
+      "description": "Advanced certificate in malware development and analysis, covering reverse engineering, malware detection, and security analysis techniques."
+    },
+    {
+      "id": 10,
+      "title": "Project Management Certificate",
+      "issuer": "Project Management Institute",
+      "date": "2023",
+      "src": "/certificate/ProjectMangement.pdf",
+      "description": "Certificate in Project Management covering project planning, execution, monitoring, and control methodologies."
+    },
+    {
+      "id": 11,
+      "title": "Real-world System Exploitation Certificate",
+      "issuer": "Cybersecurity Training Institute",
+      "date": "2024",
+      "src": "/certificate/Real-world_System_Exploitation_certificate.pdf",
+      "description": "Certificate in Real-world System Exploitation covering penetration testing, vulnerability assessment, and system security testing."
+    },
+    {
+      "id": 12,
+      "title": "Real-world Web Exploitation Certificate",
+      "issuer": "Cybersecurity Training Institute",
+      "date": "2024",
+      "src": "/certificate/Real-world_Web_Exploitation_certificate.pdf",
+      "description": "Certificate in Real-world Web Exploitation covering web application security, OWASP vulnerabilities, and web penetration testing techniques."
+    },
+    {
+      "id": 13,
+      "title": "Basic Certificate",
+      "issuer": "Educational Institution",
+      "date": "2023",
+      "src": "/certificate/basic_certificate.pdf",
+      "description": "Basic certification demonstrating fundamental knowledge and skills in the specified field of study."
+    },
+    {
+      "id": 14,
+      "title": "REAN Institute Certificate",
+      "issuer": "REAN Institute",
+      "date": "2023",
+      "src": "/certificate/BUNKHEANG-HENG--rean-ff53.pdf",
+      "description": "Certificate from REAN Institute recognizing completion of specialized training program and achievement of learning objectives."
+    },
+    {
+      "id": 15,
+      "title": "General Achievement Certificate",
+      "issuer": "Educational Institution",
+      "date": "2023",
+      "src": "/certificate/certificate.pdf",
+      "description": "General achievement certificate recognizing completion of educational program and demonstration of required competencies."
+    },
+    {
+      "id": 16,
+      "title": "Additional Achievement Certificate",
+      "issuer": "Educational Institution",
+      "date": "2023",
+      "src": "/certificate/certificate-1687351461466.pdf",
+      "description": "Additional achievement certificate recognizing completion of specialized training or educational program."
     }
 ]

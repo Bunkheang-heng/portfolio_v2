@@ -6,12 +6,16 @@ import Hero from '@/app/components/hero'
 import Education from '@/app/components/education'
 import Link from 'next/link'
 import Image from 'next/image'
+import SEOStructuredData, { websiteStructuredData, softwareApplicationStructuredData } from '@/app/components/SEOStructuredData'
 
 export default function Home() {
   return (
-    <main className="bg-[var(--background)] min-h-screen font-mono">
-      {/* Matrix-like background effect */}
-      <div className="fixed inset-0 matrix-bg opacity-10 pointer-events-none"></div>
+    <>
+      <SEOStructuredData type="WebSite" data={websiteStructuredData} />
+      <SEOStructuredData type="SoftwareApplication" data={softwareApplicationStructuredData} />
+      <main className="bg-[var(--background)] min-h-screen font-mono">
+        {/* Matrix-like background effect */}
+        <div className="fixed inset-0 matrix-bg opacity-10 pointer-events-none"></div>
       
       <div className="relative z-10">
         <Navbar />
@@ -180,6 +184,7 @@ export default function Home() {
                       0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
         }
       `}</style>
-    </main>
+      </main>
+    </>
   )
 }
