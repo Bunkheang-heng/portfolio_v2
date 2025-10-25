@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'HENG Bunkheang - Full Stack Developer Portfolio',
-    short_name: 'HENG Portfolio',
-    description: 'Full Stack Developer specializing in React, Next.js, Node.js, and cybersecurity. Experienced in building web applications, AI-powered solutions, and secure systems.',
+    name: 'HENG Bunkheang (Kheang) - Full Stack Developer Portfolio',
+    short_name: 'Bunkheang Heng',
+    description: 'HENG Bunkheang (Kheang) - Full Stack Developer specializing in React, Next.js, Node.js, and cybersecurity. Experienced in building web applications, AI-powered solutions, and secure systems.',
     start_url: '/',
     display: 'standalone',
     background_color: '#1a1a2e',
@@ -24,9 +24,9 @@ export default function manifest(): MetadataRoute.Manifest {
         purpose: 'maskable'
       }
     ],
-    categories: ['developer', 'portfolio', 'technology'],
+    categories: ['developer', 'portfolio', 'technology', 'software-engineer', 'cambodia'],
     lang: 'en',
     scope: '/',
-    id: 'kheang-portfolio'
+    id: 'bunkheangheng-portfolio'
   }
 }

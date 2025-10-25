@@ -1,0 +1,41 @@
+/* TEAM */
+Developer: HENG Bunkheang (Kheang)
+Site: https://bunkheangheng.site
+Email: contact@bunkheangheng.site
+Location: Phnom Penh, Cambodia
+GitHub: https://github.com/Bunkheang-heng
+LinkedIn: https://linkedin.com/in/bunkheangheng
+Twitter: @bunkheangheng
+
+/* ALTERNATE NAMES */
+Also known as:
+- Bunkheang Heng
+- Heng Bunkheang
+- Bunkheang
+- Kheang
+- bunkheangheng
+- hengbunkheang
+
+/* SKILLS */
+Full Stack Development
+- JavaScript / TypeScript
+- React / Next.js
+- Node.js
+- Python
+- MongoDB / PostgreSQL
+- AWS / Docker
+
+Cybersecurity
+- Web Security
+- Application Security
+- Penetration Testing
+
+/* SITE */
+Last update: 2024
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: React, Next.js, TailwindCSS
+Tools: VS Code, Git, GitHub
+Language: English
+Doctype: HTML5
+IDE: Cursor / VS Code
+

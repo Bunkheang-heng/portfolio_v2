@@ -20,6 +20,15 @@ export const metadata: Metadata = {
   },
   description: "Full Stack Developer specializing in React, Next.js, Node.js, and cybersecurity. Experienced in building web applications, AI-powered solutions, and secure systems. Available for freelance and full-time opportunities.",
   keywords: [
+    // Name variations for personal brand search
+    "HENG Bunkheang",
+    "Bunkheang Heng",
+    "Heng Bunkheang",
+    "Bunkheang",
+    "Kheang",
+    "bunkheangheng",
+    "hengbunkheang",
+    // Professional skills
     "Full Stack Developer",
     "React Developer",
     "Next.js Developer", 
@@ -34,7 +43,9 @@ export const metadata: Metadata = {
     "AWS",
     "Docker",
     "Portfolio",
-    "Software Engineer"
+    "Software Engineer",
+    "Cambodia Developer",
+    "Cambodian Software Engineer"
   ],
   authors: [{ name: "HENG Bunkheang" }],
   creator: "HENG Bunkheang",
@@ -44,14 +55,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://kheang-portfolio.vercel.app'),
+  metadataBase: new URL('https://bunkheangheng.site'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://kheang-portfolio.vercel.app',
+    url: 'https://bunkheangheng.site',
     title: 'HENG Bunkheang - Full Stack Developer & Cybersecurity Expert',
     description: 'Full Stack Developer specializing in React, Next.js, Node.js, and cybersecurity. Experienced in building web applications, AI-powered solutions, and secure systems.',
     siteName: 'HENG Bunkheang Portfolio',
@@ -95,15 +106,37 @@ export default function RootLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://bunkheangheng.site/#person",
     "name": "HENG Bunkheang",
+    "alternateName": [
+      "Bunkheang Heng",
+      "Heng Bunkheang",
+      "Bunkheang",
+      "Kheang",
+      "bunkheangheng",
+      "hengbunkheang"
+    ],
+    "givenName": "Bunkheang",
+    "familyName": "HENG",
     "jobTitle": "Full Stack Developer & Cybersecurity Expert",
     "description": "Full Stack Developer specializing in React, Next.js, Node.js, and cybersecurity. Experienced in building web applications, AI-powered solutions, and secure systems.",
-    "url": "https://kheang-portfolio.vercel.app",
-    "image": "https://kheang-portfolio.vercel.app/me.png",
+    "url": "https://bunkheangheng.site",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://bunkheangheng.site/me.png",
+      "width": "1200",
+      "height": "630"
+    },
+    "email": "contact@bunkheangheng.site",
+    "nationality": {
+      "@type": "Country",
+      "name": "Cambodia"
+    },
     "sameAs": [
       "https://github.com/Bunkheang-heng",
       "https://linkedin.com/in/bunkheangheng",
-      "https://twitter.com/bunkheangheng"
+      "https://twitter.com/bunkheangheng",
+      "https://bunkheangheng.site"
     ],
     "knowsAbout": [
       "JavaScript",
@@ -122,12 +155,23 @@ export default function RootLayout({
     "hasOccupation": {
       "@type": "Occupation",
       "name": "Full Stack Developer",
-      "description": "Develops web applications using modern JavaScript frameworks and cloud technologies"
+      "description": "Develops web applications using modern JavaScript frameworks and cloud technologies",
+      "occupationalCategory": "15-1252.00"
     },
     "alumniOf": {
       "@type": "EducationalOrganization",
       "name": "Tech University"
-    }
+    },
+    "knowsLanguage": [
+      {
+        "@type": "Language",
+        "name": "English"
+      },
+      {
+        "@type": "Language",
+        "name": "Khmer"
+      }
+    ]
   };
 
   return (
@@ -137,6 +181,14 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <meta name="author" content="HENG Bunkheang" />
+        <meta name="designer" content="HENG Bunkheang" />
+        <meta name="reply-to" content="contact@bunkheangheng.site" />
+        <meta name="owner" content="HENG Bunkheang" />
+        <link rel="author" href="https://bunkheangheng.site/humans.txt" />
+        <link rel="me" href="https://github.com/Bunkheang-heng" />
+        <link rel="me" href="https://linkedin.com/in/bunkheangheng" />
+        <link rel="me" href="https://twitter.com/bunkheangheng" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors duration-300`}

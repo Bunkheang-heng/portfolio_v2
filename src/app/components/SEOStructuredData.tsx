@@ -27,7 +27,7 @@ export default function SEOStructuredData<T>({ type, data }: SEOStructuredDataPr
   return (
     <script
       type="application/ld+json"
-      // We stringify without spacing to keep payload small; it’s fine.
+      // We stringify without spacing to keep payload small; it's fine.
       dangerouslySetInnerHTML={{ __html: JSON.stringify(payload) }}
     />
   );
@@ -49,17 +49,35 @@ export const personStructuredData = {
   '@id': PERSON_ID,
   url: SITE,
   name: 'HENG Bunkheang',
+  alternateName: [
+    'Bunkheang Heng',
+    'Heng Bunkheang',
+    'Bunkheang',
+    'Kheang',
+    'bunkheangheng',
+    'hengbunkheang',
+  ],
+  givenName: 'Bunkheang',
+  familyName: 'HENG',
   image: {
     '@type': 'ImageObject',
     url: IMAGE_URL,
+    width: 1200,
+    height: 630,
   },
   jobTitle: 'Full Stack Developer & Cybersecurity Expert',
   description:
     'Full Stack Developer specializing in React, Next.js, Node.js, and cybersecurity. Experienced in building web applications, AI-powered solutions, and secure systems.',
+  email: 'contact@bunkheangheng.site',
+  nationality: {
+    '@type': 'Country',
+    name: 'Cambodia',
+  },
   sameAs: [
     'https://github.com/Bunkheang-heng',
     'https://linkedin.com/in/bunkheangheng',
     'https://twitter.com/bunkheangheng',
+    'https://bunkheangheng.site',
   ],
   knowsAbout: [
     'JavaScript',
@@ -74,6 +92,16 @@ export const personStructuredData = {
     'PostgreSQL',
     'AWS',
     'Docker',
+  ],
+  knowsLanguage: [
+    {
+      '@type': 'Language',
+      name: 'English',
+    },
+    {
+      '@type': 'Language',
+      name: 'Khmer',
+    },
   ],
 };
 

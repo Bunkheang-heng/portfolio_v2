@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/testing/'],
     },
-    sitemap: 'https://kheang-portfolio.vercel.app/sitemap.xml',
+    sitemap: 'https://bunkheangheng.site/sitemap.xml',
   }
 }
